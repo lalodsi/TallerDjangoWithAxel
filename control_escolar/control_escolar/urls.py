@@ -23,6 +23,6 @@ urlpatterns = [
     path('hola/',views.hola),
     path('adios/', views.adios),
     path('calculos/',views.caculos),
-    path('index/',views.index)
+    path('/',views.index)
     ]
 
