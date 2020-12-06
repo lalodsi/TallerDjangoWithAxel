@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
-from control_escolar import views
+from control_escolar import views as vistas_locales
+from matricula import views as matricula_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hola/',views.hola),
-    path('adios/', views.adios),
-    path('calculos/',views.caculos)
+    path('hola/',vistas_locales.hola),
+    path('adios/', vistas_locales.adios),
+    path('calculos/',vistas_locales.caculos),
+    path('matriculados/',matricula_views.lista_de_grupos)
 ]
