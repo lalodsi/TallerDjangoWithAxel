@@ -1,6 +1,7 @@
 """ Las views es donde esta gran parte de la logica"""
 from datetime import datetime
 from django.http import HttpResponse
+from django.template import loader
   
 def hola(request):
     ahora = datetime.now().strftime('%H')
@@ -19,3 +20,9 @@ def caculos (request):
     x = request.GET['numeros']
     print(type(x))
     return HttpResponse(f'{str(x)}')
+
+def index(request):
+    template = loader.get_template('index.html')
+    context = {
+    }
+    return HttpResponse(template.render(context, request))
