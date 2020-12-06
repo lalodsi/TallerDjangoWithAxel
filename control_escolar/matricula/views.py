@@ -31,19 +31,14 @@ grupos =[
 
     }
 ]
+co={
 
-  #"""Lista los grupos que existe en la escuela"""
-   # contenido = [ ]
-    #for grupo in grupos:
-     #   contenido.append("""
-      #      <p><strong> {Grupo}</strong></p>
-       #     <p><small> {Profesora}</small></p>
-        #    <p><small> {Salon}</small></p>
-         #   <p><small> {Limpieza}</small></p>
-          #  """.format(**grupo))
+}
 
-#Manda los grupos registrados
 def lista_de_grupos(request):
   
     
     return render(request,'inicio.html',{'grupos':grupos})
+
+def index(request):
+    return render(request,'index.html',co)

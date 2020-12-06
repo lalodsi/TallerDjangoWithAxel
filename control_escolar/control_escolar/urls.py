@@ -25,5 +25,6 @@ urlpatterns = [
     path('hola/',vistas_locales.hola),
     path('adios/', vistas_locales.adios),
     path('calculos/',vistas_locales.caculos),
-    path('matriculados/',matricula_views.lista_de_grupos)
+    path('matriculados/',matricula_views.lista_de_grupos),
+    path('in/',matricula_views.index),
 ]
